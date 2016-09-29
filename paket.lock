@@ -1,0 +1,49 @@
+FRAMEWORK: >= NET45
+NUGET
+  remote: https://www.nuget.org/api/v2
+    FSharp.Core (4.0.0.1) - redirects: force
+    IKVM (8.1.5717)
+    Stanford.NLP.CoreNLP (3.6)
+      IKVM (8.1.5717)
+GITHUB
+  remote: fsprojects/FSharp.TypeProviders.StarterPack
+    src/ProvidedTypes.fs (dbbfb58d1238bf21c84c455451501c7f31ae95e1)
+    src/ProvidedTypes.fsi (dbbfb58d1238bf21c84c455451501c7f31ae95e1)
+GROUP Build
+FRAMEWORK: >= NET45
+NUGET
+  remote: https://www.nuget.org/api/v2
+    FAKE (4.38.1)
+    FSharp.Compiler.Service (2.0.0.6)
+    FSharp.Formatting (2.14.4)
+      FSharp.Compiler.Service (2.0.0.6)
+      FSharpVSPowerTools.Core (>= 2.3 < 2.4)
+    FSharpVSPowerTools.Core (2.3)
+      FSharp.Compiler.Service (>= 2.0.0.3)
+    Octokit (0.21.1)
+    SourceLink.Fake (1.1)
+GITHUB
+  remote: fsharp/FAKE
+    modules/Octokit/Octokit.fsx (bf0b3d929a50e5cba157376200e2dc58522f3e37)
+      Octokit (>= 0.20)
+GROUP Test
+FRAMEWORK: >= NET45
+NUGET
+  remote: https://www.nuget.org/api/v2
+    NUnit (3.4.1)
+    NUnit.Console (3.4.1)
+      NUnit.ConsoleRunner (>= 3.4.1)
+      NUnit.Extension.NUnitProjectLoader (>= 3.4.1)
+      NUnit.Extension.NUnitV2Driver (>= 3.4.1)
+      NUnit.Extension.NUnitV2ResultWriter (>= 3.4.1)
+      NUnit.Extension.TeamCityEventListener (>= 1.0.1)
+      NUnit.Extension.VSProjectLoader (>= 3.4.1)
+    NUnit.ConsoleRunner (3.4.1)
+    NUnit.Extension.NUnitProjectLoader (3.4.1)
+    NUnit.Extension.NUnitV2Driver (3.4.1)
+    NUnit.Extension.NUnitV2ResultWriter (3.4.1)
+    NUnit.Extension.TeamCityEventListener (1.0.1)
+    NUnit.Extension.VSProjectLoader (3.4.1)
+GITHUB
+  remote: fsprojects/FsUnit
+    src/FsUnit.NUnit/FsUnitTyped.fs (28c993616bf5c433343ed22b21c8d8ddf8a86b74)

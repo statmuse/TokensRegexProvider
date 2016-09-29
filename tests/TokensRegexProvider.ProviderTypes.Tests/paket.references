@@ -1,0 +1,5 @@
+FSharp.Core
+Stanford.NLP.CoreNLP
+group Test
+  NUnit
+  File:FsUnitTyped.fs

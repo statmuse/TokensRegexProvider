@@ -1,0 +1,28 @@
+type project
+title
+    TokensRegexProvider
+owners
+    Riccardo Terrell
+authors
+    Riccardo Terrell
+projectUrl
+    https://github.com/rikace/TokensRegexProvider/
+iconUrl
+    https://github.com/rikace/TokensRegexProvider/raw/master/docs/files/img/logo.png
+licenseUrl
+    https://github.com/rikace/TokensRegexProvider/blob/master/LICENSE.txt
+requireLicenseAcceptance
+    false
+copyright
+    Copyright 2016
+tags
+    TokensRegex TypeProvider Stanford StanfordNLP NLP
+summary
+    Stanford NLP TokensRegex Type Provider
+description
+    F# Type Provider for Stanford NLP TokensRegex - http://nlp.stanford.edu/software/tokensregex.html
+files
+    ../../bin/TokensRegexProvider/TokensRegexProvider*.* ==> lib/net45
+    TokensRegexProvider.fsx ==> .
+dependencies
+    Stanford.NLP.CoreNLP 3.6
