@@ -50,14 +50,14 @@ let testAssemblies = "tests/**/bin/Release/*Tests*.dll"
 
 // Git configuration (used for publishing documentation in gh-pages branch)
 // The profile where the project is posted
-let gitOwner = "rikace"
+let gitOwner = "statmuse"
 let gitHome = sprintf "%s/%s" "https://github.com" gitOwner
 
 // The name of the project on GitHub
 let gitName = "TokensRegexProvider"
 
 // The url for the raw files hosted
-let gitRaw = environVarOrDefault "gitRaw" "https://raw.githubusercontent.com/rikace"
+let gitRaw = environVarOrDefault "gitRaw" "https://raw.githubusercontent.com/statmuse"
 
 // --------------------------------------------------------------------------------------
 // END TODO: The rest of the file includes standard build steps
