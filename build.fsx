@@ -2,6 +2,7 @@
 // FAKE build script
 // --------------------------------------------------------------------------------------
 
+#r "System.IO.Compression.FileSystem.dll"
 #r @"packages/build/FAKE/tools/FakeLib.dll"
 open Fake
 open Fake.Testing
@@ -113,6 +114,19 @@ Target "CleanDocs" (fun _ ->
 
 // --------------------------------------------------------------------------------------
 // Build library & test project
+
+Target "RestoreModels" (fun _ ->
+    let unZipTo toDir file =
+        printfn "Unzipping file '%s' to '%s'" file toDir
+        Compression.ZipFile.ExtractToDirectory(file, toDir)
+
+    let restoreFolderFromFile folder zipFile =
+        if not <| Directory.Exists folder then
+            zipFile |> unZipTo folder
+
+    let coreNLPDir = __SOURCE_DIRECTORY__ + "/paket-files/nlp.stanford.edu/stanford-corenlp-full-2015-12-09"
+    restoreFolderFromFile (coreNLPDir+"/models") (coreNLPDir+"/stanford-corenlp-3.6.0-models.jar")
+)
 
 Target "Build" (fun _ ->
     !! "TokensRegexProvider.sln"
@@ -368,6 +382,7 @@ Target "BuildPackage" DoNothing
 Target "All" DoNothing
 
 "Clean"
+  ==> "RestoreModels"
   ==> "AssemblyInfo"
   ==> "Build"
   ==> "CopyBinaries"

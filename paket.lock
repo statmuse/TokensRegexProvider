@@ -9,6 +9,9 @@ GITHUB
   remote: fsprojects/FSharp.TypeProviders.StarterPack
     src/ProvidedTypes.fs (dbbfb58d1238bf21c84c455451501c7f31ae95e1)
     src/ProvidedTypes.fsi (dbbfb58d1238bf21c84c455451501c7f31ae95e1)
+HTTP
+  remote: http://nlp.stanford.edu
+    stanford-corenlp-full-2015-12-09.zip (/software/stanford-corenlp-full-2015-12-09.zip)
 GROUP Build
 FRAMEWORK: >= NET45
 NUGET
