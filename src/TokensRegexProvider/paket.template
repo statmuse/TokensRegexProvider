@@ -6,11 +6,11 @@ owners
 authors
     Riccardo Terrell
 projectUrl
-    https://github.com/rikace/TokensRegexProvider/
+    https://github.com/statmuse/TokensRegexProvider/
 iconUrl
-    https://github.com/rikace/TokensRegexProvider/raw/master/docs/files/img/logo.png
+    https://github.com/statmuse/TokensRegexProvider/raw/master/docs/files/img/logo.png
 licenseUrl
-    https://github.com/rikace/TokensRegexProvider/blob/master/LICENSE.txt
+    https://github.com/statmuse/TokensRegexProvider/blob/master/LICENSE.txt
 requireLicenseAcceptance
     false
 copyright

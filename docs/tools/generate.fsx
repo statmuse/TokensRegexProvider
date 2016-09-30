@@ -11,17 +11,17 @@
 // (This is the original behaviour of ProjectScaffold prior to multi project support)
 let referenceBinaries = []
 // Web site location for the generated documentation
-let website = "/TokenRegexTypeProvider"
+let website = "/TokensRegexProvider"
 
-let githubLink = "https://github.com/rikace/TokenRegexTypeProvider/rikace/TokenRegexTypeProvider"
+let githubLink = "https://github.com/statmuse/TokensRegexProvider"
 
 // Specify more information about your project
 let info =
-  [ "project-name", "TokenRegexTypeProvider"
-    "project-author", "Sergey Tihon"
-    "project-summary", "Stanford.NLP TokenRegex Type Provider"
+  [ "project-name", "TokensRegexProvider"
+    "project-author", "Riccardo Terrell"
+    "project-summary", "Stanford.NLP TokensRegex Type Provider"
     "project-github", githubLink
-    "project-nuget", "http://nuget.org/packages/TokenRegexTypeProvider" ]
+    "project-nuget", "http://nuget.org/packages/TokensRegexProvider" ]
 
 // --------------------------------------------------------------------------------------
 // For typical project, no changes are needed below
