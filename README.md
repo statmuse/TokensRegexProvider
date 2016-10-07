@@ -1,4 +1,5 @@
-# TokensRegexProvider [![NuGet Badge](https://raw.githubusercontent.com/statmuse/TokensRegexProvider/master/docs/files/img/logo.png= 80x)](https://www.nuget.org/packages/TokensRegexProvider/0.0.1)
+# TokensRegexProvider [![NuGet Badge](<img src="https://raw.githubusercontent.com/statmuse/TokensRegexProvider/master/docs/files/img/logo.png" width="60">)](https://www.nuget.org/packages/TokensRegexProvider/0.0.1)
+
 
 F# Type Provider for [Stanford NLP TokenRegex](http://nlp.stanford.edu/software/tokensregex.html)
 
