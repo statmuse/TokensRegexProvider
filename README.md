@@ -1,4 +1,4 @@
-# TokensRegexProvider [![NuGet Badge](https://buildstats.info/nuget/TokensRegexProvider/0.0.1)](https://www.nuget.org/packages/TokensRegexProvider/0.0.1)
+# TokensRegexProvider [![NuGet Badge](https://raw.githubusercontent.com/statmuse/TokensRegexProvider/master/docs/files/img/logo.png)](https://www.nuget.org/packages/TokensRegexProvider/0.0.1)
 
 F# Type Provider for [Stanford NLP TokenRegex](http://nlp.stanford.edu/software/tokensregex.html)
 
