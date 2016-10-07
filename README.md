@@ -8,7 +8,7 @@ Documentation: http://statmuse.github.io/TokensRegexProvider
 
 Mono | .NET
 ---- | ----
-[![AppVeyor build status]https://ci.appveyor.com/api/projects/status/sf42224wbvhl5jll?svg=true](https://ci.appveyor.com/api/projects/status/sf42224wbvhl5jll?svg=true)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/sf42224wbvhl5jll?svg=true)](https://ci.appveyor.com/api/projects/status/sf42224wbvhl5jll?svg=true)
 
 ## Maintainer(s)
 
