@@ -1,4 +1,4 @@
-# TokensRegexProvider [![NuGet Badge](https://buildstats.info/nuget/TokensRegexProvider)](https://www.nuget.org/packages/TokensRegexProvider)
+# TokensRegexProvider [![NuGet Badge](https://buildstats.info/nuget/TokensRegexProvider/0.0.1)](https://www.nuget.org/packages/TokensRegexProvider/0.0.1)
 
 F# Type Provider for [Stanford NLP TokenRegex](http://nlp.stanford.edu/software/tokensregex.html)
 
@@ -8,8 +8,10 @@ Documentation: http://statmuse.github.io/TokensRegexProvider
 
 Mono | .NET
 ---- | ----
-[![Travis build status](https://travis-ci.org/statmuse/TokensRegexProvider.svg)](https://travis-ci.org/statmuse/TokensRegexProvider)
+[![AppVeyor build status]https://ci.appveyor.com/api/projects/status/sf42224wbvhl5jll?svg=true](https://ci.appveyor.com/api/projects/status/sf42224wbvhl5jll?svg=true)
 
 ## Maintainer(s)
 
 - [@rikace](https://github.com/rikace)
+
+
