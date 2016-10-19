@@ -68,6 +68,7 @@
       <Paket>True</Paket>
       <Link>paket-files/FsUnitTyped.fs</Link>
     </Compile>
+    <Compile Include="TokensRegex.RegexTests.fs" />
     <Compile Include="TokenSequencePatternProviderTests.fs" />
     <Compile Include="TokensRegexWithEnvTests.fs" />
     <None Include="paket.references" />
