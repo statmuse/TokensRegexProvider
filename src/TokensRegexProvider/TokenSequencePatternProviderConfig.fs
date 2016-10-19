@@ -1,5 +1,6 @@
 ﻿module TokensRegexProvider.TokenSequencePatternProviderConfig
 
+open System
 open System.Text.RegularExpressions
 open ProviderImplementation.ProvidedTypes
 open Microsoft.FSharp.Quotations
@@ -21,10 +22,11 @@ let internal createTypes () =
         ProvidedTypeDefinition(Constants.thisAssembly, Constants.rootNamespace, "TokenSequencePatternProvider", Some(baseTy))
 
     tokenSeqType.DefineStaticParameters(
-        parameters = [ ProvidedStaticParameter ("pattern", typeof<string>) ],
+        parameters = [ ProvidedStaticParameter ("pattern", typeof<string>)
+                       ProvidedStaticParameter ("separator", typeof<string>, "\n") ],
         instantiationFunction = (fun typeName parameterValues ->
             match parameterValues with
-            | [| :? string as pattern|] ->
+            | [| :? string as pattern; :? string as separator |] ->
                 let matcherType = ProvidedTypeDefinition("MatcherType", Some typeof<TokenSequenceMatcher>, IsErased = true)
 
                 let completeMatch =
@@ -37,8 +39,14 @@ let internal createTypes () =
                 completeMatch.AddXmlDoc("Gets the complete pattern match")
                 matcherType.AddMember completeMatch
 
+                let patterns =
+                    pattern.Split([|separator|], StringSplitOptions.None)
+                    |> Array.map (fun x -> x.Trim())
+                    |> Array.filter (String.IsNullOrWhiteSpace >> not)
 
-                getGroupName pattern
+                patterns
+                |> Array.map getGroupName
+                |> Array.concat
                 |> List.ofArray
                 |> List.distinct
                 |> List.map (fun group ->
@@ -55,11 +63,11 @@ let internal createTypes () =
                 |> matcherType.AddMembers
 
                 let ty = ProvidedTypeDefinition(Constants.thisAssembly, Constants.rootNamespace, typeName, Some(baseTy), IsErased = true)
-                ty.AddXmlDoc <| sprintf "A strongly typed interface to the regular TokenSequencePattern '%s'" pattern
+                ty.AddXmlDoc <| sprintf "A strongly typed interface to the regular TokenSequencePattern '%A'" patterns
 
                 ty.AddMember matcherType
 
-                let ctor = ProvidedConstructor([], InvokeCode = (fun args -> <@@ TokenSequencePattern.compile(pattern) @@>))
+                let ctor = ProvidedConstructor([], InvokeCode = (fun args -> <@@ TokenSequencePattern.compile(patterns) @@>))
                 ctor.AddXmlDoc "Initializes a TokenSequencePattern instance in new Env"
                 ty.AddMember ctor
 
@@ -67,7 +75,7 @@ let internal createTypes () =
                                 [ProvidedParameter("env", typeof<Env>)],
                                 InvokeCode = (fun args ->
                                     <@@ let env = %%args.[0]:edu.stanford.nlp.ling.tokensregex.Env
-                                        TokenSequencePattern.compile(env, pattern) @@>))
+                                        TokenSequencePattern.compile(env, patterns) @@>))
                 ctorEnv.AddXmlDoc "Initializes a TokenSequencePattern instance in provided environment"
                 ty.AddMember ctorEnv
 

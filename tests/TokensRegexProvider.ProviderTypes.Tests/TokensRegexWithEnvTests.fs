@@ -64,3 +64,41 @@ let ``Use custom Env with TP binded inside`` () =
     matcher.find() |> shouldEqual true
     matcher.CompleteMatch.text
     |> shouldEqual "Mellitus was the first Bishop of London"
+
+
+type MyPattern3 = TokenSequencePatternProvider< """(?$all /archbishop/ /of/ /canterbury/)
+                                                   (?$number /,/ /and/ /a/ /member/)""" >
+
+[<Test>]
+let ``Multipattern (multiline definition with default separator)`` () =
+    let env = TokenSequencePattern.getNewEnv();
+    env.setDefaultStringPatternFlags(NodePattern.CASE_INSENSITIVE);
+
+    let pattern = MyPattern3(env)
+    let matcher = pattern.GetMatcher(tokens)
+
+    matcher.find() |> shouldEqual true
+    matcher.``$all``.text |> shouldEqual "Archbishop of Canterbury"
+    matcher.``$number``.text |> shouldEqual ", and a member"
+    matcher.CompleteMatch.text |> shouldEqual "Archbishop of Canterbury, and a member"
+
+    matcher.find() |> shouldEqual false
+
+
+type MyPattern4 = TokenSequencePatternProvider< """(?$all /archbishop/ /of/ /canterbury/);
+                                                   (?$number /,/ /and/ /a/ /member/)""", ";" >
+
+[<Test>]
+let ``Multipattern (multiline definition with custom separtor)`` () =
+    let env = TokenSequencePattern.getNewEnv();
+    env.setDefaultStringPatternFlags(NodePattern.CASE_INSENSITIVE);
+
+    let pattern = MyPattern3(env)
+    let matcher = pattern.GetMatcher(tokens)
+
+    matcher.find() |> shouldEqual true
+    matcher.``$all``.text |> shouldEqual "Archbishop of Canterbury"
+    matcher.``$number``.text |> shouldEqual ", and a member"
+    matcher.CompleteMatch.text |> shouldEqual "Archbishop of Canterbury, and a member"
+
+    matcher.find() |> shouldEqual false
