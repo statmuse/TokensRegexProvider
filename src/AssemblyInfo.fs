@@ -7,7 +7,7 @@ open System.Runtime.CompilerServices
 [<assembly: AssemblyDescriptionAttribute("F# Type Provider for Stanford NLP TokensRegex - http://nlp.stanford.edu/software/tokensregex.html")>]
 [<assembly: AssemblyVersionAttribute("0.0.1")>]
 [<assembly: AssemblyFileVersionAttribute("0.0.1")>]
-[<assembly: InternalsVisibleToAttribute("TokensRegexProvider.Tests")>]
+[<assembly: InternalsVisibleToAttribute("TokensRegexProvider.ProviderTypes.Tests")>]
 do ()
 
 module internal AssemblyVersionInformation =

@@ -79,13 +79,9 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\TokensRegexProvider\TokensRegexProvider.fsproj">
-      <Name>TokensRegexProvider</Name>
-      <Project>{da94d138-7f80-42a2-b30a-c0f6825827e2}</Project>
-      <Private>True</Private>
-    </ProjectReference>
+    <Reference Include="TokensRegexProvider">
+      <HintPath>..\..\bin\TokensRegexProvider\TokensRegexProvider.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Choose>
     <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">
