@@ -85,7 +85,7 @@ Target "AssemblyInfo" (fun _ ->
         Attribute.Description description
         Attribute.Version release.AssemblyVersion
         Attribute.FileVersion release.AssemblyVersion
-        Attribute.InternalsVisibleTo "TokensRegexProvider.Tests" ]
+        Attribute.InternalsVisibleTo "TokensRegexProvider.ProviderTypes.Tests" ]
 )
 
 // Copies binaries from default VS location to expected bin folder
