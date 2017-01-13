@@ -16,7 +16,7 @@ GROUP Build
 FRAMEWORK: >= NET45
 NUGET
   remote: https://www.nuget.org/api/v2
-    FAKE (4.38.1)
+    FAKE (4.48)
     FSharp.Compiler.Service (2.0.0.6)
     FSharp.Formatting (2.14.4)
       FSharp.Compiler.Service (2.0.0.6)
@@ -27,26 +27,85 @@ NUGET
     SourceLink.Fake (1.1)
 GITHUB
   remote: fsharp/FAKE
-    modules/Octokit/Octokit.fsx (bf0b3d929a50e5cba157376200e2dc58522f3e37)
+    modules/Octokit/Octokit.fsx (749fbad6f6808c569e542ee5eaf3c4cc7275c029)
       Octokit (>= 0.20)
 GROUP Test
 FRAMEWORK: >= NET45
 NUGET
   remote: https://www.nuget.org/api/v2
-    NUnit (3.4.1)
-    NUnit.Console (3.4.1)
-      NUnit.ConsoleRunner (>= 3.4.1)
-      NUnit.Extension.NUnitProjectLoader (>= 3.4.1)
-      NUnit.Extension.NUnitV2Driver (>= 3.4.1)
-      NUnit.Extension.NUnitV2ResultWriter (>= 3.4.1)
-      NUnit.Extension.TeamCityEventListener (>= 1.0.1)
-      NUnit.Extension.VSProjectLoader (>= 3.4.1)
-    NUnit.ConsoleRunner (3.4.1)
-    NUnit.Extension.NUnitProjectLoader (3.4.1)
-    NUnit.Extension.NUnitV2Driver (3.4.1)
-    NUnit.Extension.NUnitV2ResultWriter (3.4.1)
-    NUnit.Extension.TeamCityEventListener (1.0.1)
-    NUnit.Extension.VSProjectLoader (3.4.1)
+    Microsoft.Win32.Primitives (4.3) - framework: >= net463
+    NETStandard.Library (1.6.1) - framework: >= net463
+      Microsoft.Win32.Primitives (>= 4.3) - framework: >= net46
+      System.AppContext (>= 4.3) - framework: >= net46
+      System.Collections.Concurrent (>= 4.3)
+      System.Console (>= 4.3) - framework: >= net46
+      System.Diagnostics.Tracing (>= 4.3)
+      System.Globalization.Calendars (>= 4.3) - framework: >= net46
+      System.IO.Compression (>= 4.3)
+      System.IO.Compression.ZipFile (>= 4.3) - framework: >= net46
+      System.IO.FileSystem (>= 4.3) - framework: >= net46
+      System.IO.FileSystem.Primitives (>= 4.3) - framework: >= net46
+      System.Net.Http (>= 4.3)
+      System.Net.Sockets (>= 4.3) - framework: >= net46
+      System.Runtime.Handles (>= 4.3) - framework: >= net46
+      System.Runtime.InteropServices (>= 4.3)
+      System.Runtime.InteropServices.RuntimeInformation (>= 4.3)
+      System.Runtime.Numerics (>= 4.3)
+      System.Security.Cryptography.Algorithms (>= 4.3) - framework: >= net46
+      System.Security.Cryptography.Encoding (>= 4.3) - framework: >= net46
+      System.Security.Cryptography.Primitives (>= 4.3) - framework: >= net46
+      System.Security.Cryptography.X509Certificates (>= 4.3) - framework: >= net46
+      System.Threading.Timer (>= 4.3) - framework: >= net451
+    NUnit (3.6)
+      NETStandard.Library (>= 1.6) - framework: >= net463
+      System.Runtime.Loader (>= 4.0) - framework: >= net463
+    NUnit.Console (3.5)
+      NUnit.ConsoleRunner (>= 3.5)
+      NUnit.Extension.NUnitProjectLoader (>= 3.5)
+      NUnit.Extension.NUnitV2Driver (>= 3.5)
+      NUnit.Extension.NUnitV2ResultWriter (>= 3.5)
+      NUnit.Extension.TeamCityEventListener (>= 1.0.2)
+      NUnit.Extension.VSProjectLoader (>= 3.5)
+    NUnit.ConsoleRunner (3.5)
+    NUnit.Extension.NUnitProjectLoader (3.5)
+    NUnit.Extension.NUnitV2Driver (3.6)
+    NUnit.Extension.NUnitV2ResultWriter (3.5)
+    NUnit.Extension.TeamCityEventListener (1.0.2)
+    NUnit.Extension.VSProjectLoader (3.5)
+    System.AppContext (4.3) - framework: >= net463
+    System.Collections.Concurrent (4.3) - framework: >= net463
+    System.Console (4.3) - framework: >= net463
+    System.Diagnostics.DiagnosticSource (4.3) - framework: >= net463
+    System.Diagnostics.Tracing (4.3) - framework: >= net463
+    System.Globalization.Calendars (4.3) - framework: >= net463
+    System.IO (4.3) - framework: >= net463
+    System.IO.Compression (4.3) - framework: >= net463
+    System.IO.Compression.ZipFile (4.3) - framework: >= net463
+    System.IO.FileSystem (4.3) - framework: >= net463
+      System.IO.FileSystem.Primitives (>= 4.3) - framework: >= net46
+    System.IO.FileSystem.Primitives (4.3)
+    System.Net.Http (4.3) - framework: >= net463
+      System.Diagnostics.DiagnosticSource (>= 4.3) - framework: >= net46
+      System.Security.Cryptography.X509Certificates (>= 4.3) - framework: >= net46
+    System.Net.Sockets (4.3) - framework: >= net463
+    System.Runtime (4.3)
+    System.Runtime.Handles (4.3) - framework: >= net463
+    System.Runtime.InteropServices (4.3) - framework: >= net463
+      System.Runtime (>= 4.3) - framework: >= net462
+    System.Runtime.InteropServices.RuntimeInformation (4.3) - framework: >= net463
+    System.Runtime.Loader (4.3) - framework: >= net463
+    System.Runtime.Numerics (4.3) - framework: >= net463
+    System.Security.Cryptography.Algorithms (4.3)
+      System.IO (>= 4.3) - framework: >= net463
+      System.Runtime (>= 4.3) - framework: >= net463
+      System.Security.Cryptography.Encoding (>= 4.3) - framework: >= net463
+      System.Security.Cryptography.Primitives (>= 4.3) - framework: net46, net461, >= net463
+    System.Security.Cryptography.Encoding (4.3)
+    System.Security.Cryptography.Primitives (4.3)
+    System.Security.Cryptography.X509Certificates (4.3)
+      System.Security.Cryptography.Algorithms (>= 4.3) - framework: >= net46
+      System.Security.Cryptography.Encoding (>= 4.3) - framework: >= net46
+    System.Threading.Timer (4.3) - framework: >= net463
 GITHUB
   remote: fsprojects/FsUnit
-    src/FsUnit.NUnit/FsUnitTyped.fs (28c993616bf5c433343ed22b21c8d8ddf8a86b74)
+    src/FsUnit.NUnit/FsUnitTyped.fs (0f3e39157b43efc71ca7ad6516e7a1f4e9ee0285)
