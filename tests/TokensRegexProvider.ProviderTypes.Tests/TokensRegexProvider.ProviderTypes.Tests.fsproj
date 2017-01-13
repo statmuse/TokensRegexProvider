@@ -227,13 +227,13 @@
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>
-        <Reference Include="IKVM.Runtime.JNI">
-          <HintPath>..\..\packages\IKVM\lib\IKVM.Runtime.JNI.dll</HintPath>
+        <Reference Include="IKVM.Runtime">
+          <HintPath>..\..\packages\IKVM\lib\IKVM.Runtime.dll</HintPath>
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>
-        <Reference Include="IKVM.Runtime">
-          <HintPath>..\..\packages\IKVM\lib\IKVM.Runtime.dll</HintPath>
+        <Reference Include="IKVM.Runtime.JNI">
+          <HintPath>..\..\packages\IKVM\lib\IKVM.Runtime.JNI.dll</HintPath>
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>
@@ -263,13 +263,23 @@
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>
+        <Reference Include="protobuf">
+          <HintPath>..\..\packages\Stanford.NLP.CoreNLP\lib\protobuf.dll</HintPath>
+          <Private>True</Private>
+          <Paket>True</Paket>
+        </Reference>
         <Reference Include="slf4j-api">
           <HintPath>..\..\packages\Stanford.NLP.CoreNLP\lib\slf4j-api.dll</HintPath>
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>
-        <Reference Include="stanford-corenlp-3.6.0">
-          <HintPath>..\..\packages\Stanford.NLP.CoreNLP\lib\stanford-corenlp-3.6.0.dll</HintPath>
+        <Reference Include="slf4j-simple">
+          <HintPath>..\..\packages\Stanford.NLP.CoreNLP\lib\slf4j-simple.dll</HintPath>
+          <Private>True</Private>
+          <Paket>True</Paket>
+        </Reference>
+        <Reference Include="stanford-corenlp-3.7.0">
+          <HintPath>..\..\packages\Stanford.NLP.CoreNLP\lib\stanford-corenlp-3.7.0.dll</HintPath>
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>

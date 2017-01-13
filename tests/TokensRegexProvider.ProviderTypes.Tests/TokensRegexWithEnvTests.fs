@@ -12,7 +12,7 @@ let private cls = CoreAnnotations.TokensAnnotation().getClass()
 let private pipeline =
     let temp = System.Environment.CurrentDirectory
     System.Environment.CurrentDirectory
-        <- __SOURCE_DIRECTORY__ + @"/../../paket-files/nlp.stanford.edu/stanford-corenlp-full-2015-12-09/models/"
+        <- __SOURCE_DIRECTORY__ + @"/../../paket-files/nlp.stanford.edu/stanford-corenlp-full-2016-10-31/models/"
 
     let res = new AnnotationPipeline()
     res.addAnnotator(new TokenizerAnnotator(false, "en"))

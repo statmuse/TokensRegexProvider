@@ -3,15 +3,15 @@ NUGET
   remote: https://www.nuget.org/api/v2
     FSharp.Core (4.0.0.1) - redirects: force
     IKVM (8.1.5717)
-    Stanford.NLP.CoreNLP (3.6)
+    Stanford.NLP.CoreNLP (3.7)
       IKVM (8.1.5717)
 GITHUB
   remote: fsprojects/FSharp.TypeProviders.StarterPack
-    src/ProvidedTypes.fs (dbbfb58d1238bf21c84c455451501c7f31ae95e1)
-    src/ProvidedTypes.fsi (dbbfb58d1238bf21c84c455451501c7f31ae95e1)
+    src/ProvidedTypes.fs (252ea631e3a7d5242205d46ffdf81fc9b03de58c)
+    src/ProvidedTypes.fsi (252ea631e3a7d5242205d46ffdf81fc9b03de58c)
 HTTP
   remote: http://nlp.stanford.edu
-    stanford-corenlp-full-2015-12-09.zip (/software/stanford-corenlp-full-2015-12-09.zip)
+    stanford-corenlp-full-2016-10-31.zip (/software/stanford-corenlp-full-2016-10-31.zip)
 GROUP Build
 FRAMEWORK: >= NET45
 NUGET
