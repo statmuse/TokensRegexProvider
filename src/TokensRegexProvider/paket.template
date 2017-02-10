@@ -14,7 +14,7 @@ licenseUrl
 requireLicenseAcceptance
     false
 copyright
-    Copyright 2016
+    Copyright 2017
 tags
     TokensRegex TypeProvider Stanford StanfordNLP NLP
 summary
@@ -25,4 +25,4 @@ files
     ../../bin/TokensRegexProvider/TokensRegexProvider*.* ==> lib/net45
     TokensRegexProvider.fsx ==> .
 dependencies
-    Stanford.NLP.CoreNLP 3.6
+    Stanford.NLP.CoreNLP 3.7

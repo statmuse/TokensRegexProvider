@@ -4,6 +4,7 @@
 
 #r "System.IO.Compression.FileSystem.dll"
 #r @"packages/build/FAKE/tools/FakeLib.dll"
+#r "System.IO.Compression.dll"
 open Fake
 open Fake.Testing
 open Fake.Git
@@ -12,6 +13,7 @@ open Fake.ReleaseNotesHelper
 open Fake.UserInputHelper
 open System
 open System.IO
+open System.IO.Compression
 #if MONO
 #else
 #load "packages/build/SourceLink.Fake/tools/Fake.fsx"
@@ -115,8 +117,29 @@ Target "CleanDocs" (fun _ ->
 // --------------------------------------------------------------------------------------
 // Build library & test project
 
+let fixFileNames path =
+    use file = File.Open(path, FileMode.Open, FileAccess.ReadWrite)
+    use archive = new ZipArchive(file, ZipArchiveMode.Update)
+    archive.Entries
+    |> Seq.toList
+    |> List.filter(fun x -> x.FullName.Contains(":"))
+    |> List.iter (fun entry ->
+        printfn "%s " entry.FullName
+        let newName = entry.FullName.Replace(":","_")
+        let newEntry = archive.CreateEntry(newName)
+        begin
+            use a = entry.Open()
+            use b = newEntry.Open()
+            a.CopyTo(b)
+        end
+        entry.Delete()
+       )
+
 Target "RestoreModels" (fun _ ->
+
     let unZipTo toDir file =
+        printfn "Renaming files inside zip archive ..."
+        fixFileNames file
         printfn "Unzipping file '%s' to '%s'" file toDir
         Compression.ZipFile.ExtractToDirectory(file, toDir)
 
@@ -124,8 +147,8 @@ Target "RestoreModels" (fun _ ->
         if not <| Directory.Exists folder then
             zipFile |> unZipTo folder
 
-    let coreNLPDir = __SOURCE_DIRECTORY__ + "/paket-files/nlp.stanford.edu/stanford-corenlp-full-2015-12-09"
-    restoreFolderFromFile (coreNLPDir+"/models") (coreNLPDir+"/stanford-corenlp-3.6.0-models.jar")
+    let coreNLPDir = __SOURCE_DIRECTORY__ + "/paket-files/nlp.stanford.edu/stanford-corenlp-full-2016-10-31"
+    restoreFolderFromFile (coreNLPDir+"/models") (coreNLPDir+"/stanford-corenlp-3.7.0-models.jar")
 )
 
 Target "Build" (fun _ ->

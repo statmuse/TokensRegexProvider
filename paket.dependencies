@@ -7,7 +7,7 @@ nuget FSharp.Core redirects: force
 github fsprojects/FSharp.TypeProviders.StarterPack src/ProvidedTypes.fsi
 github fsprojects/FSharp.TypeProviders.StarterPack src/ProvidedTypes.fs
 
-http http://nlp.stanford.edu/software/stanford-corenlp-full-2015-12-09.zip
+http http://nlp.stanford.edu/software/stanford-corenlp-full-2016-10-31.zip
 
 group Build
   source https://nuget.org/api/v2
